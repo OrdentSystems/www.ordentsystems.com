@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}{% if title != "Ordent Systems" %} - Ordent Systems{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ base }}/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 1200 320" role="img" aria-label="Ordent Systems logo">
+  <defs>
+    <style>
+      :root{
+        --bg:transparent;  /* keep transparent for website headers */
+        --fg:#0b1220;      /* deep slate for text/lines */
+        --mut:#5a667f;     /* muted subtitle */
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="320" fill="var(--bg)"/>
+
+  <!-- Icon container -->
+  <g transform="translate(40,40)">
+    <rect x="0" y="0" width="240" height="240" rx="44" fill="none" stroke="var(--fg)" stroke-width="10"/>
+
+    <!-- Grid -->
+    <g opacity="0.14" stroke="var(--fg)" stroke-width="2">
+      <path d="M60 40V200"/>
+      <path d="M120 40V200"/>
+      <path d="M180 40V200"/>
+      <path d="M40 60H200"/>
+      <path d="M40 120H200"/>
+      <path d="M40 180H200"/>
+    </g>
+
+    <!-- Rings -->
+    <circle cx="120" cy="120" r="72" fill="none" stroke="var(--fg)" stroke-width="14"/>
+    <circle cx="120" cy="120" r="46" fill="none" stroke="var(--fg)" stroke-width="8" opacity="0.9"/>
+
+    <!-- Ticks -->
+    <g stroke="var(--fg)" stroke-width="8" stroke-linecap="round">
+      <path d="M120 26V44"/>
+      <path d="M120 196V214"/>
+      <path d="M26 120H44"/>
+      <path d="M196 120H214"/>
+    </g>
+
+    <!-- O stroke -->
+    <path d="M120 68
+             a52 52 0 1 0 0.01 0"
+          fill="none" stroke="var(--fg)" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Keyway notch -->
+    <rect x="152" y="108" width="52" height="26" rx="8" fill="white"/>
+    <rect x="153" y="109" width="50" height="24" rx="8" fill="none" stroke="var(--fg)" stroke-width="6" opacity="0.9"/>
+
+    <circle cx="120" cy="120" r="5" fill="var(--fg)" opacity="0.9"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(320,88)" fill="var(--fg)">
+    <!-- Use system fonts; swap to your brand font later -->
+    <text x="0" y="72"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+          font-size="84"
+          font-weight="700"
+          letter-spacing="0.5">
+      Ordent
+    </text>
+
+    <text x="2" y="142"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+          font-size="40"
+          font-weight="600"
+          letter-spacing="6"
+          fill="var(--mut)">
+      SYSTEMS
+    </text>
+
+    <!-- Optional tagline (delete if you don't want it) -->
+    <text x="2" y="200"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+          font-size="28"
+          font-weight="500"
+          fill="var(--mut)">
+      Deterministic scheduling infrastructure
+    </text>
+  </g>
+</svg>
+</div>
+      <nav>
+        <a href="{{ base }}/">Home</a>
+        <a href="{{ base }}/about.html">About</a>
+        <a href="{{ base }}/investors.html">Investors</a>
+        <a href="{{ base }}/positions.html">Positions</a>
+      </nav>
+    </header>
+
+    <main>
+      {{ body | safe }}
+    </main>
+
+    <footer>
+      <span>© Ordent Systems</span>
+      <span><a href="mailto:contact@ordentsystems.com">contact@ordentsystems.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
